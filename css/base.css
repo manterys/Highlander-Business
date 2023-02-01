@@ -1,0 +1,110 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Roboto+Condensed&display=swap');
+
+:root {
+    /* Font Family */
+    --font-1: 'Josefin Sans', sans-serif;
+    --font-2: 'Roboto Condensed', sans-serif;
+
+    /* Font Weight */
+    /* --fw-thin: 100; */
+    --fw-light: 300;
+    --fw-regular: 400;
+    /* --fw-medium: 500; */
+    --fw-semi-bold: 600;
+    /* --fw-bold: 700; */
+    /* --fw-black: 900; */
+
+    /* Font Size */
+    --font-scale-ratio: 1;
+    --fs-basic: calc(16px * var(--font-scale-ratio));
+
+    --fs-xsm: calc(.7 * var(--fs-basic));
+    --fs-sm: calc(.8 * var(--fs-basic));
+    --fs: var(--fs-basic);
+    --fs-md: calc(1.2 * var(--fs-basic));
+    --fs-lg: calc(1.6 * var(--fs-basic));
+    --fs-xlg: calc(2.2 * var(--fs-basic));
+    --fs-xxlg: calc(2.8 * var(--fs-basic));
+    --fs-display-1: calc(4 * var(--fs-basic));
+    --fs-display-2: calc(5 * var(--fs-basic));
+    --fs-display-3: calc(6 * var(--fs-basic));
+
+    /* Colors */
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 92%);
+    --blue: hsl(204, 42%, 27%);
+    --hover-color: rgb(243, 30, 30);
+
+    /* Space */
+    --space-scale-ratio: 1;
+    --space: calc(3rem * var(--space-scale-ratio));
+
+    --space-0_25: calc(0.25 * var(--space));
+    --space-0_5: calc(0.5 * var(--space));
+    --space-0_75: calc(0.75 * var(--space));
+    --space-1: var(--space);
+    --space-1_5: calc(1.5 * var(--space));
+    --space-2: calc(2 * var(--space));
+    --space-2_5: calc(2.5 * var(--space));
+    --space-3: calc(3 * var(--space));
+    --space-3_5: calc(3.5 * var(--space));
+    --space-4: calc(4 * var(--space));
+}
+
+/* Base style */
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html, body {
+    font-family: var(--font-1);
+    font-weight: var(--fw-regular);
+    line-height: 1.5;
+    overflow-x: hidden;
+    color: var(--white);
+    background-color: var(--black);
+    letter-spacing: 1px;
+}
+ul, ol, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+@media screen and (hover: hover){
+    a:hover {
+        color: var(--hover-color);
+    }
+}
+img {
+    width: 100%;
+}
+button {
+    all: unset;
+    cursor: pointer;
+    display: inline-block;
+}
+/* !!!!!! FOCUS */
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* background: cyan; */
+}
+@media screen and (max-width: 1000px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}

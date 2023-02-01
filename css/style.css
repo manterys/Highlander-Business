@@ -1,0 +1,301 @@
+/* Typography */
+h1 {
+    font-family: var(--font-1);
+    font-size: clamp(2.6rem, 7vw, 4rem);
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+h2 {
+    font-family: var(--font-1);
+    font-size: clamp(1.6rem, 5vw, 2.6rem);
+    font-weight: var(--fw-semi-bo6ld);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+h3 {
+    font-size: var(--fs-xlg);
+}
+.lead{
+    font-family: var(--font-2);
+    letter-spacing: 1px;
+    font-size: var(--fs-xlg)
+}
+
+/* Loader */
+.loader {
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: var(--black);
+    transition: all 1s ease;
+}
+.loader img {
+    width: 40px;
+    margin-bottom: 3rem;
+    animation: loader 1.6s linear infinite;
+}
+.loader.loaded {
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+@keyframes loader {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Page */
+/* .page {
+    opacity: 0;
+} */
+.page.loaded {
+    background: var(--black);
+    opacity: 1;
+    transition: opacity 8s ease 1.5s;
+}
+
+/* Header */
+.header {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background: var(--black); */
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /* background: blue; */
+}
+@media screen and (min-width: 660px) {
+    .header .container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+/* Logo */
+.logo img {
+    width: 50px;
+}
+/* Navigation */
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: cyan; */
+}
+.nav ul li {
+    text-align: center;
+    line-height: .6;
+    margin-left: .8rem;
+    /* transition: all 1s ease; */
+}
+.nav ul li a {
+    text-transform: uppercase;
+    font-size: .5rem;
+    font-weight: var(--fw-light);
+    letter-spacing: 1px;
+    /* transition: all 1s ease; */
+}
+@media screen and (min-width:660px) {
+    .nav ul li {
+        margin-left: 2rem;
+    }
+    .nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+/* Hero */
+.hero {
+    min-height: 700px;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    align-items: center;
+    /* padding-top: 5rem; */
+    background: url(../images/landing-page-bg.webp) no-repeat center center / cover;
+    /* z-index: 1; */
+}
+.hero:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    /* z-index: 1; */
+}
+.hero .container {
+    /* height: 100%; */
+    /* background: cyan; */
+    z-index: 1;
+}
+/* .hero-brand {
+    width: 170px;
+    margin-bottom: 5rem;
+} */
+.hero h1 {
+    /* text-align: center; */
+    margin-bottom: 5rem;
+}
+.hero .social-icon {
+    text-align: center;
+    /* background: cyan; */
+}
+.hero .social-icon img{
+    width: 40px;
+    margin: 0 .5rem;
+}
+
+/* Our Mission */
+.mission {
+    background: var(--white);
+    color: var(--black);
+    padding: var(--space-1_5) 0;
+}
+.mission .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: cyan;
+}
+.mission .title {
+    text-align: center;
+}
+.mission .title p {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    letter-spacing: 3px;
+}
+.mission .geometric-shape {
+    width: 20px;
+    padding: var(--space-1) 0;
+}
+.mission .content {
+    display: flex;
+    gap: 5rem;
+    /* background: cyan; */
+}
+.mission .img-content {
+    display: none;
+    width: 50%;
+    height: auto;
+    background: url(../images/landing-page-bg.webp) no-repeat center center / cover;
+}
+.mission .text-content {
+    /* line-height: 1.7; */
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+}
+.mission .text-content p {
+    font-family: var(--font-2);
+    text-align: justify;
+    font-size: var(--fs-basic);
+    font-weight: var(--fw-light);
+    line-height: 2;
+    letter-spacing: 1px;
+}
+.mission .text-content p:nth-child(2) {
+    margin-top: var(--space-0_75);
+    margin-bottom: var(--space-1);
+    color: rgb(99, 99, 99);
+}
+.mission button {
+    background: var(--blue);
+    text-transform: uppercase;
+    color:var(--white);
+    font-size: .8rem;
+    font-weight: var(--fw-light);
+    padding: .6rem 3rem;
+    text-align: center;
+    letter-spacing: 3px;
+}
+/* Media Mission */
+@media screen and (min-width: 660px) {
+    .mission .img-content {
+        display: block;
+    }
+    .mission .text-content {
+        width: 50%;
+    }
+}
+
+/* Features */
+.features {
+    padding: var(--space-1_5) 0;
+}
+.features .title {
+    display: flex;
+    align-items: center;
+}
+.features .geometric-shape {
+    width: 25px;
+    margin-right: 1rem;
+    transform: translateY(-4px);
+}
+.features-img {
+    position: relative;
+    width: 45%;
+    margin: var(--space-1) auto var(--space-0_75);
+    /* background: cyan; */
+}
+.features span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    /* background: cyan; */
+}
+.features p {
+    font-family: var(--font-2);
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    /* margin-bottom: var(--space-1); */
+}
+.market p:first-child{
+    margin-bottom: var(--space-1);
+}
+.market p:last-child{
+    color: rgb(145, 145, 145);
+}
+
+/* Media Root */
+@media screen and (min-width: 660px) {
+    :root{
+        --font-scale-ratio: .8;
+        /* --space-scale-ratio: .6; */
+    }
+}
+/* @media screen and (max-width: 660px) {
+    :root{
+        --font-scale-ratio: .6;
+        --space-scale-ratio: .4;
+    }
+}
+@media screen and (max-width: 480px) {
+    :root{
+        --font-scale-ratio: .4;
+    }
+} */
