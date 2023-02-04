@@ -145,17 +145,17 @@ h3 {
 /* .hero .container {
     background: cyan;
 }*/
-.hero h1 img {
+h1 img {
     width: 16px;
     margin-right: .6rem;
     transform: translateY(2px);
 }
-.hero h1 {
+h1 {
     text-align: center;
     margin-bottom: var(--space-2);
 }
 @media screen and (min-width:660px) {
-    .hero h1 img {
+    h1 img {
         width: 30px;
         margin-right: 1.2rem;
     }
@@ -163,16 +163,16 @@ h3 {
         margin-bottom: var(--space-3);
     }
 }
-.hero .social-icon {
+.social-icon {
     text-align: center;
 }
-.hero .social-icon img{
+.social-icon img{
     width: 40px;
     margin: 0 .5rem;
     transition: transform .6s ease;
 }
 @media screen and (hover:hover) {
-    .hero .social-icon a:hover img{
+    .social-icon a:hover img{
         transform: translateY(-5px);
     }
 }
@@ -332,11 +332,10 @@ h3 {
     background: var(--white);
     color: var(--black);
     font-size: var(--fs-sm);
-    /* text-align: center; */
+    /* background: cyan; */
 }
 .contact .title {
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     margin-bottom: var(--space-1);
 }
@@ -346,29 +345,20 @@ h3 {
     transform: translateY(-4px);
 }
 .workers {
-    background: blue;
-}
-.worker {
-    /* width: 80%; */
-    margin: 3rem 0;
-    /* background: cyan; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
 }
 .worker-data {
-    /* width: 80%; */
     margin-bottom: .4rem;
-    background: cyan;
-    /* margin: 0 auto; */
 }
 .worker-data img{
-    /* width: 80%; */
-    /* width: 200px; */
-    /* width: 400px; */
-    /* width: 300px; */
+    width: 280px;
+    height: 300px;
     object-fit: cover;
-    /* max-width: 300px; */
 }
 .name {
-    /* line-height: 0.1; */
     background: var(--blue);
     color: var(--white);
     padding: .4rem;
@@ -390,8 +380,7 @@ h3 {
 }
 .contact-info-title {
     color: var(--blue);
-    margin-bottom: var(--space-0_75);
-    /* background: cyan; */
+    margin: var(--space-1) 0;
 }
 
 .contact-info p{
@@ -399,31 +388,37 @@ h3 {
 }
 /* Media Contact */
 @media screen and (min-width: 400px) {
-    .worker-data img{
-    }
-    .worker-data {
-        /* width: 100%; */
-    }
-    .workers {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .worker-data img{
-        /* width: 300px; */
-    }
 }
 @media screen and (min-width: 660px) {
-    
-    .workers {
-        display: flex;
-        flex: wrap;
-    }
-    .worker-data img{
-        /* width: 300px; */
-        /* width: 400px; */
-        /* object-fit: contain; */
-    }
+}
 
+/* Section Contact */
+.section-contact {
+    padding: var(--space-2) 0;
+    text-align: center;
+}
+.section-contact p {
+    font-family: var(--font-2);
+    font-size: var(--fs-md);
+    line-height: 1.7;
+}
+.section-contact .social-icon {
+    margin: var(--space-1_5) 0;
+}
+.section-contact > a {
+    text-transform: uppercase;
+    font-size: var(--fs-xsm);
+    letter-spacing: 2px;
+}
+
+/* Footer */
+.footer {
+    background: var(--blue);
+    text-align: center;
+    padding: .4rem 0;
+    font-size: var(--fs-xsm);
+    font-weight: var(--fw-light);
+    letter-spacing: 3px;
 }
 
 /* Media Root */

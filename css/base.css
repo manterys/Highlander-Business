@@ -99,13 +99,13 @@ button {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
     /* background: cyan; */
 }
-@media screen and (max-width: 1000px) {
+/* @media screen and (min-width: 1000px) {
     .container {
         padding-left: 2rem;
         padding-right: 2rem;
     }
-}
+} */
