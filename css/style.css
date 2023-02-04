@@ -53,13 +53,13 @@ h3 {
 }
 
 /* Page */
-/* .page {
+.page {
     opacity: 0;
-} */
+}
 .page.loaded {
     background: var(--black);
     opacity: 1;
-    transition: opacity 8s ease 1.5s;
+    transition: opacity 4s ease .4s;
 }
 
 /* Header */
@@ -373,6 +373,7 @@ h1 {
 }
 .worker-contact span {
     line-height: 2;
+    color: var(--black);
 }
 .contact-info {
     text-align: center;
@@ -382,14 +383,8 @@ h1 {
     color: var(--blue);
     margin: var(--space-1) 0;
 }
-
 .contact-info p{
     font-weight: var(--fw-light);
-}
-/* Media Contact */
-@media screen and (min-width: 400px) {
-}
-@media screen and (min-width: 660px) {
 }
 
 /* Section Contact */
@@ -416,12 +411,16 @@ h1 {
     background: var(--blue);
     text-align: center;
     padding: .4rem 0;
+    padding: var(--space-0_25) 0;
     font-size: var(--fs-xsm);
     font-weight: var(--fw-light);
     letter-spacing: 3px;
 }
+.footer a {
+    border-bottom: 1px solid var(--white);
+}
 
-/* Media Root */
+/* Media Root font and space scale */
 @media screen and (min-width: 660px) {
     :root{
         --font-scale-ratio: .8;
@@ -433,8 +432,8 @@ h1 {
         --space-scale-ratio: 1.2;
     }
 }
-/* @media screen and (max-width: 480px) {
+@media screen and (min-width: 1200px) {
     :root{
-        --font-scale-ratio: .4;
+        --space-scale-ratio: 1.5;
     }
-} */
+}
