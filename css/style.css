@@ -53,9 +53,9 @@ h3 {
 }
 
 /* Page */
-/* .page {
+.page {
     opacity: 0;
-} */
+}
 .page.loaded {
     background-color: var(--black);
     opacity: 1;
