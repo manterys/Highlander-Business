@@ -1,10 +1,9 @@
 /* Typography */
 h1 {
-    font-family: var(--font-1);
-    font-weight: var(--fw-light);
-    font-size: clamp(1.2rem, 5vw, 3rem);
+    font-family: var(--font-2);
+    font-weight: var(--fw-semi-bold);
+    font-size: clamp(1.4rem, 5vw, 3rem);
     text-transform: uppercase;
-    letter-spacing: 0px;
     line-height: 1;
 }
 h2 {
@@ -13,14 +12,6 @@ h2 {
     font-weight: var(--fw-semi-bo6ld);
     text-transform: uppercase;
     letter-spacing: 6px;
-}
-h3 {
-    font-size: var(--fs-xlg);
-}
-.lead{
-    font-family: var(--font-2);
-    letter-spacing: 1px;
-    font-size: var(--fs-xlg)
 }
 
 /* Loader */
@@ -38,7 +29,7 @@ h3 {
     transition: all 1s ease;
 }
 .loader img {
-    width: 40px;
+    width: 30px;
     margin-bottom: 3rem;
     animation: loader 1.6s linear infinite;
 }
@@ -53,9 +44,9 @@ h3 {
 }
 
 /* Page */
-/* .page {
+.page {
     opacity: 0;
-} */
+}
 .page.loaded {
     background-color: var(--black);
     opacity: 1;
@@ -88,8 +79,11 @@ h3 {
 }
 /* Logo */
 .logo img {
-    width: 20px;
+    width: 30px;
     transform: translateY(4px);
+}
+.logo span {
+    font-family: var(--font-2);
 }
 /* Navigation */
 .nav ul {
@@ -161,7 +155,7 @@ h3 {
 }
 .hero .container {
     z-index: 1;
-    padding: 0;
+    /* padding: 0;/ */
 }
 h1 img {
     width: 16px;
@@ -169,16 +163,20 @@ h1 img {
     transform: translateY(2px);
 }
 h1 {
-    text-align: center;
-    margin-bottom: var(--space-2);
+    /* text-align: center; */
+    /* margin-bottom: var(--space-2); */
+}
+.hero p {
+    font-family: var(--font-2);
+    font-size: var(--fs-xsm);
+    letter-spacing: 2px;
+    margin-top: var(--space-0_25);
+    margin-bottom: var(--space-1_5);
 }
 @media screen and (min-width:660px) {
     h1 img {
         width: 30px;
         margin-right: 1.2rem;
-    }
-    .hero h1 {
-        margin-bottom: var(--space-3);
     }
 }
 .social-icon {
@@ -221,7 +219,7 @@ h1 {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 5rem;
+    gap: var(--space-0_75);
 }
 .mission .img-content {
     display: none;
@@ -267,6 +265,9 @@ h1 {
 }
 /* Media Mission */
 @media screen and (min-width: 660px) {
+    /* .mission .content {
+        gap: 3rem;
+    } */
     .mission .img-content {
         display: block;
     }
@@ -416,13 +417,16 @@ h1 {
     background-color: var(--black);
     text-align: center;
 }
+.contact h1 {
+    margin-bottom: var(--space-1);
+}
 .contact p {
     font-family: var(--font-2);
     font-size: var(--fs-md);
     line-height: 1.7;
 }
 .contact .social-icon {
-    margin: var(--space-1_5) 0;
+    margin: var(--space-1) 0;
 }
 .contact > a {
     text-transform: uppercase;
@@ -447,13 +451,13 @@ h1 {
 /* Media Root font and space scale */
 @media screen and (min-width: 660px) {
     :root{
-        --font-scale-ratio: .8;
+        /* --font-scale-ratio: .9; */
         --space-scale-ratio: 1.2;
     }
 }
 @media screen and (min-width: 1000px) {
     :root{
-        --font-scale-ratio: 1;
+        /* --font-scale-ratio: 1; */
         --space-scale-ratio: 1.4;
     }
 }
