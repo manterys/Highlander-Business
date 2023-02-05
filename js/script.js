@@ -5,12 +5,13 @@ const appLoader = function() {
     const loader = document.querySelector('.loader');
     
     window.addEventListener('load', function() {
-       
         loader.classList.add('loaded')
-        page.classList.add('loaded')
-            setTimeout(() => {
-                        loader.style.display = 'none'
-                    }, 500)
+        
+        loader.addEventListener('transitionend', function() {
+            page.classList.add('loaded')
+            loader.style.display = 'none'
+            })
+       
     })
 }
 appLoader()
