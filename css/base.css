@@ -77,11 +77,8 @@ a {
     text-decoration: none;
     color: var(--white);
 }
-@media screen and (hover: hover){
-    a:hover {
-        font-weight: var(--fw-semi-bold);
-    }
-}
+/* @media screen and (hover: hover){
+} */
 img {
     width: 100%;
 }
