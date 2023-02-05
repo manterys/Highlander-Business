@@ -30,7 +30,7 @@ const appHeader = () => {
         } else {
         header.classList.remove('scrolled')
         }
-        if (prevScrollpos > currentScrollPos || currentScrollPos <= 400) {
+        if (prevScrollpos > currentScrollPos || currentScrollPos <= 500) {
           header.classList.remove('offset')
         } else {
         header.classList.add('offset')
