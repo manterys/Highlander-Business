@@ -154,12 +154,17 @@ h2 {
 }
 .hero .container {
     z-index: 1;
-    /* text-align: center; */
 }
 h1 img {
     width: 16px;
     margin-right: .6rem;
     transform: translateY(2px);
+}
+@media screen and (min-width:660px) {
+    h1 img {
+        width: 30px;
+        margin-right: 1.2rem;
+    }
 }
 .hero p {
     font-family: var(--font-2);
@@ -167,12 +172,6 @@ h1 img {
     letter-spacing: 2px;
     margin-top: var(--space-0_25);
     margin-bottom: var(--space-1_5);
-}
-@media screen and (min-width:660px) {
-    h1 img {
-        width: 30px;
-        margin-right: 1.2rem;
-    }
 }
 .social-icon {
     text-align: center;
@@ -260,9 +259,6 @@ h1 img {
 }
 /* Media Mission */
 @media screen and (min-width: 660px) {
-    /* .mission .content {
-        gap: 3rem;
-    } */
     .mission .img-content {
         display: block;
     }
@@ -446,13 +442,11 @@ h1 img {
 /* Media Root font and space scale */
 @media screen and (min-width: 660px) {
     :root{
-        /* --font-scale-ratio: .9; */
         --space-scale-ratio: 1.2;
     }
 }
 @media screen and (min-width: 1000px) {
     :root{
-        /* --font-scale-ratio: 1; */
         --space-scale-ratio: 1.4;
     }
 }

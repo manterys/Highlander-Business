@@ -80,11 +80,6 @@ a {
 img {
     width: 100%;
 }
-button {
-    all: unset;
-    cursor: pointer;
-    display: inline-block;
-}
 
 .container {
     width: 100%;
@@ -98,7 +93,7 @@ button {
     padding-bottom: var(--space-1_5);
 }
 
-/* Translate Animation */
+/* Animation */
 .animation-top {
     opacity: 0;
     transform: translateY(80px);
