@@ -53,9 +53,9 @@ h3 {
 }
 
 /* Page */
-.page {
+/* .page {
     opacity: 0;
-}
+} */
 .page.loaded {
     background-color: var(--black);
     opacity: 1;
@@ -107,6 +107,25 @@ h3 {
     font-size: .5rem;
     font-weight: var(--fw-light);
     letter-spacing: 1px;
+    position: relative;
+}
+.nav ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--white);
+    transition: width .4s ease;
+}
+.scrolled .nav ul li a:after {
+    background-color: var(--black);
+}
+@media screen and (hover: hover){
+    .nav ul li a:hover::after {
+        width: 20px;
+    }
 }
 @media screen and (min-width:660px) {
     .nav ul li {
@@ -124,7 +143,7 @@ h3 {
 
 /* Hero */
 .hero {
-    min-height: 700px;
+    min-height: 640px;
     height: 100vh;
     position: relative;
     display: flex;
@@ -180,17 +199,16 @@ h1 {
 .mission {
     background-color: var(--white);
     color: var(--black);
-    padding: var(--space-1_5) 0;
 }
 .mission .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.mission .title {
+.mission-title {
     text-align: center;
 }
-.mission .title p {
+.mission-title p {
     font-size: var(--fs-sm);
     font-weight: var(--fw-light);
     letter-spacing: 3px;
@@ -229,6 +247,7 @@ h1 {
     color: rgb(99, 99, 99);
 }
 .mission .btn {
+    display: inline-block;
     background-color: var(--blue);
     text-transform: uppercase;
     color:var(--white);
@@ -237,6 +256,14 @@ h1 {
     padding: .6rem 3rem;
     text-align: center;
     letter-spacing: 3px;
+    transition: background-color .2s ease;
+}
+@media screen and (hover:hover) {
+    .mission .btn:hover {
+        background-color: transparent;
+        outline: 1px solid var(--blue);
+        color: var(--blue);
+    }
 }
 /* Media Mission */
 @media screen and (min-width: 660px) {
@@ -253,10 +280,9 @@ h1 {
 
 /* Features */
 .features {
-    padding: var(--space-1_5) 0;
     background-color: var(--black);
 }
-.features .title {
+.features-title {
     display: flex;
     align-items: center;
 }
@@ -327,18 +353,17 @@ h1 {
 }
 
 /* Contact */
-.contact {
-    padding: var(--space-1_5) 0;
+.contact-workers {
     background-color: var(--white);
     color: var(--black);
     font-size: var(--fs-sm);
 }
-.contact .title {
+.contact-workers-title {
     display: flex;
     align-items: center;
     margin-bottom: var(--space-1);
 }
-.contact .geometric-shape {
+.contact-workers .geometric-shape {
     width: 25px;
     margin-right: 1rem;
     transform: translateY(-4px);
@@ -387,20 +412,19 @@ h1 {
 }
 
 /* Section Contact */
-.section-contact {
+.contact {
     background-color: var(--black);
-    padding: var(--space-2) 0;
     text-align: center;
 }
-.section-contact p {
+.contact p {
     font-family: var(--font-2);
     font-size: var(--fs-md);
     line-height: 1.7;
 }
-.section-contact .social-icon {
+.contact .social-icon {
     margin: var(--space-1_5) 0;
 }
-.section-contact > a {
+.contact > a {
     text-transform: uppercase;
     font-size: var(--fs-xsm);
     letter-spacing: 2px;
@@ -417,23 +441,24 @@ h1 {
     letter-spacing: 1px;
 }
 .footer a {
-    border-bottom: 1px solid var(--white);
+    font-family: var(--font-2);
 }
 
 /* Media Root font and space scale */
 @media screen and (min-width: 660px) {
     :root{
         --font-scale-ratio: .8;
+        --space-scale-ratio: 1.2;
     }
 }
 @media screen and (min-width: 1000px) {
     :root{
         --font-scale-ratio: 1;
-        --space-scale-ratio: 1.2;
+        --space-scale-ratio: 1.4;
     }
 }
 @media screen and (min-width: 1200px) {
     :root{
-        --space-scale-ratio: 1.5;
+        --space-scale-ratio: 1.6;
     }
 }
