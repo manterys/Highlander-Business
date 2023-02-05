@@ -3,7 +3,7 @@ window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-T4F82GHD89');
+  gtag('config', 'G-YZPGVJ4KDS');
 
 // Loader
 const appLoader = function() {
