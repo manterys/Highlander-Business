@@ -93,7 +93,18 @@ button {
     padding-left: 1.4rem;
     padding-right: 1.4rem;
 }
-
 .section-space {
-    padding: var(--space-1_5) 0;
+    padding-top: var(--space-1_5);
+    padding-bottom: var(--space-1_5);
+}
+
+/* Translate Animation */
+.animation-top {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s ease
+}
+.animationShow {
+    opacity: 1;
+    transform: translateY(0px);
 }
