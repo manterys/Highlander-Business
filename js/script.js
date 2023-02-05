@@ -16,6 +16,32 @@ const appLoader = function() {
 
 appLoader()
 
+const appHeader = () => {
+
+    const header = document.getElementById('header')
+    const pxShow = 100
+    let prevScrollpos = window.pageYOffset;
+
+    window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+    
+        if (window.scrollY >= pxShow) {
+        header.classList.add('scrolled')
+        } else {
+        header.classList.remove('scrolled')
+        }
+        if (prevScrollpos > currentScrollPos || currentScrollPos <= 400) {
+          header.classList.remove('offset')
+        } else {
+        header.classList.add('offset')
+        }
+
+    prevScrollpos = currentScrollPos;
+    }
+}
+
+appHeader()
+
 // Move to
 const appMoveTo = () => {
     const easeFunctions = {
@@ -44,7 +70,7 @@ const appMoveTo = () => {
     const triggers = document.querySelectorAll('.smoothscroll')
 
     const moveTo = new MoveTo({
-        tolerance: 88,
+        tolerance: 0,
         duration: 1200,
         easing: 'easeInOutCubic',
         container: window
