@@ -3,7 +3,6 @@ const appLoader = function() {
 
     const page = document.querySelector('.page');
     const loader = document.querySelector('.loader');
-    const animationHero = document.querySelectorAll('.animation-hero');
     
     window.addEventListener('load', function() {
         loader.classList.add('loaded')
@@ -11,9 +10,6 @@ const appLoader = function() {
         loader.addEventListener('transitionend', function() {
             page.classList.add('loaded')
             loader.style.display = 'none'
-            animationHero.forEach(el => {
-                el.classList.add('animationShow')
-            })
             })
     })
 }

@@ -1,4 +1,4 @@
-HIGHLANDER BUSINESS
+Highlander-Business
 
 Sources and Credits:
 
@@ -12,3 +12,6 @@ Stock Photos:
 Javascript Files:
  - MoveTo.js (https://github.com/hsnaydd/moveTo)
  - Splidejs.com (https://github.com/Splidejs/splide)
+
+MIT license
+Highlander-Business is free to use for personal and commercial projects. 
