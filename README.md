@@ -1,1 +1,1 @@
-![CHEESE!](hb-desktop.png)(hb-mobile.png)
+![CHEESE!](hb.png)
