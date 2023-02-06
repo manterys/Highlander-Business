@@ -94,10 +94,19 @@ img {
 }
 
 /* Animation */
-.animation-top {
+.animation-top, .animation-hero {
     opacity: 0;
     transform: translateY(100px);
     transition: transform .8s ease, opacity .8s ease;
+}
+.animation-hero:first-child {
+    transition-delay: .4s;
+}
+.animation-hero:nth-child(2) {
+    transition-delay: .6s;
+}
+.animation-hero:nth-child(3) {
+    transition-delay: .8s;
 }
 .animationShow {
     opacity: 1;
