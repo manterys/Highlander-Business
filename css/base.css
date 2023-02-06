@@ -103,3 +103,16 @@ img {
     opacity: 1;
     transform: translateY(0px);
 }
+
+/* Splidejs */
+.splide__track {
+    padding-bottom: 3rem;
+}
+.splide__pagination__page {
+    background: var(--blue);
+    margin: 0 .6rem;
+}
+.splide__pagination__page.is-active {
+    background: var(--blue);
+    opacity: 1;
+}

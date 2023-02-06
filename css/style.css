@@ -34,7 +34,7 @@ h2 {
 }
 .loader.loaded {
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1.4s ease;
 }
 @keyframes loader {
     to {
@@ -349,6 +349,7 @@ h1 img {
     background-color: var(--white);
     color: var(--black);
     font-size: var(--fs-sm);
+    text-align: center;
 }
 .contact-workers-title {
     display: flex;
@@ -360,18 +361,18 @@ h1 img {
     margin-right: 1rem;
     transform: translateY(-4px);
 }
-.workers {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 2rem;
-}
 .worker-data {
-    margin-bottom: .4rem;
+    margin: 0 auto;
+    margin-bottom: .6rem;
+    width: 80%;
+}
+@media screen and (min-width: 660px) {
+    .worker-data {
+        width: 100%;
+    }
 }
 .worker-data img{
-    width: 280px;
-    height: 300px;
+    height: 280px;
     object-fit: cover;
 }
 .name {

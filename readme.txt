@@ -11,3 +11,4 @@ Stock Photos:
  
 Javascript Files:
  - MoveTo.js (https://github.com/hsnaydd/moveTo)
+ - Splidejs.com (https://github.com/Splidejs/splide)

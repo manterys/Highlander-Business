@@ -102,3 +102,22 @@ const appMoveTo = () => {
 }
 
 appMoveTo()
+
+// Splide
+new Splide( '.splide', {
+    type : 'slide',
+    pagination: false,
+    arrows: false,
+    autoplay: true,
+    perPage: 3,
+    gap: '2rem',
+    breakpoints: {
+    1000: {
+        pagination: true,
+        perPage: 2,
+    },
+    660: {
+        perPage: 1,
+    }
+ }
+ } ).mount();
