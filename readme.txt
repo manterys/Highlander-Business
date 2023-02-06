@@ -6,7 +6,7 @@ Fonts:
  - Josefin Sans (https://fonts.google.com/specimen/Josefin+Sans)
  - Roboto Condensed (https://fonts.google.com/specimen/Roboto+Condensed)
 
-Stock Photos and Graphics:
+Stock Photos:
  - Unsplash.com (https://unsplash.com/)
  
 Javascript Files:
