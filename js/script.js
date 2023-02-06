@@ -15,7 +15,6 @@ const appLoader = function() {
                 el.classList.add('animationShow')
             })
             })
-       
     })
 }
 appLoader()
