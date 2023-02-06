@@ -1,3 +1,3 @@
 HTML5 / CSS3
 
-![CHEESE!](hb.png)
+![CHEESE!](desktop-mobile-image.png)
