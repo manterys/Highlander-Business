@@ -1,0 +1,13 @@
+HIGHLANDER BUSINESS
+
+Sources and Credits:
+
+Fonts:
+ - Josefin Sans (https://fonts.google.com/specimen/Josefin+Sans)
+ - Roboto Condensed (https://fonts.google.com/specimen/Roboto+Condensed)
+
+Stock Photos and Graphics:
+ - Unsplash.com (https://unsplash.com/)
+ 
+Javascript Files:
+ - MoveTo.js (https://github.com/hsnaydd/moveTo)
