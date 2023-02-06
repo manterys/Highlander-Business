@@ -96,8 +96,8 @@ img {
 /* Animation */
 .animation-top {
     opacity: 0;
-    transform: translateY(80px);
-    transition: all 1s ease
+    transform: translateY(100px);
+    transition: transform .8s ease, opacity .8s ease;
 }
 .animationShow {
     opacity: 1;
