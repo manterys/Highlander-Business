@@ -30,11 +30,17 @@ h2 {
 .loader img {
     width: 30px;
     margin-bottom: 3rem;
+    -webkit-animation: loader 1.6s linear infinite;
     animation: loader 1.6s linear infinite;
 }
 .loader.loaded {
     opacity: 0;
     transition: opacity 1.4s ease;
+}
+@-webkit-keyframes loader {
+    to {
+        transform: rotate(360deg);
+    }
 }
 @keyframes loader {
     to {
@@ -373,6 +379,7 @@ h1 img {
 }
 .worker-data img{
     height: 280px;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 .name {
