@@ -104,7 +104,7 @@ appMoveTo()
 
 // Splide
 new Splide( '.splide', {
-    type : 'slide',
+    type : 'loop',
     pagination: false,
     arrows: false,
     autoplay: true,
