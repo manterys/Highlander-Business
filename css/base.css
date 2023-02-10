@@ -70,7 +70,7 @@ html, body {
 html {
     background: var(--white);
 }
-ul, ol, li {
+li {
     list-style: none;
 }
 a {

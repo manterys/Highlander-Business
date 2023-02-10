@@ -91,24 +91,21 @@ h2 {
     font-family: var(--font-2);
 }
 /* Navigation */
-.nav ul {
+.nav{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.nav ul li {
-    text-align: center;
-    line-height: .6;
-    margin-left: .8rem;
-}
-.nav ul li a {
+.nav-link {
     text-transform: uppercase;
+    margin-left: .8rem;
     font-size: .5rem;
     font-weight: var(--fw-light);
     letter-spacing: 1px;
     position: relative;
+    transition: margin-left .4s ease, font-size .4s ease;
 }
-.nav ul li a:after {
+.nav-link:after {
     content: '';
     position: absolute;
     bottom: -6px;
@@ -118,31 +115,29 @@ h2 {
     background-color: var(--white);
     transition: width .4s ease;
 }
-.scrolled .nav ul li a:after {
+.scrolled .nav-link:after {
     background-color: var(--black);
 }
 @media screen and (hover: hover){
-    .nav ul li a:hover::after {
+    .nav-link:hover::after {
         width: 20px;
     }
 }
 @media screen and (min-width:660px) {
-    .nav ul li {
-        margin-left: 2rem;
-    }
-    .nav ul li a {
+    .nav-link {
         font-size: .6rem;
+        margin-left: 2rem;
     }
 }
 @media screen and (min-width:1000px) {
-    .nav ul li a {
+    .nav-link {
         font-size: .8rem;
     }
 }
 
 /* Hero */
 .hero {
-    min-height: 640px;
+    min-height: 600px;
     height: 100vh;
     position: relative;
     display: flex;
@@ -161,20 +156,18 @@ h2 {
 .hero .container {
     z-index: 1;
 }
-h1 img {
-    width: 16px;
-    margin-right: .6rem;
-    transform: translateY(2px);
+.hero-title {
+    display: flex;
 }
-@media screen and (min-width:660px) {
-    h1 img {
-        width: 30px;
-        margin-right: 1.2rem;
-    }
+.hero-title img,
+.contact-title img {
+    width: clamp(20px, 4vw, 30px);
+    margin-right: .6rem;
+    transition: width .4s ease;
 }
 .hero p {
     font-family: var(--font-2);
-    font-size: var(--fs-xsm);
+    font-size: clamp(.8rem, 3vw, 1.2rem);
     letter-spacing: 2px;
     margin-top: var(--space-0_25);
     margin-bottom: var(--space-1_5);
@@ -207,7 +200,7 @@ h1 img {
     text-align: center;
 }
 .mission-title p {
-    font-size: var(--fs-sm);
+    font-size: clamp(.9rem, 5vw, 1.2rem);
     font-weight: var(--fw-light);
     letter-spacing: 3px;
 }
@@ -234,7 +227,6 @@ h1 img {
 .mission .text-content p {
     font-family: var(--font-2);
     text-align: justify;
-    font-size: var(--fs-basic);
     font-weight: var(--fw-light);
     line-height: 2;
     letter-spacing: 1px;
@@ -319,7 +311,7 @@ h1 img {
     margin-bottom: var(--space-1);
 }
 .market p:last-child{
-    color: rgb(145, 145, 145);
+    color: hsl(0, 0%, 40%);
 }
 /* Media Features */
 @media screen and (min-width: 660px) {
@@ -416,7 +408,9 @@ h1 img {
     background-color: var(--black);
     text-align: center;
 }
-.contact h1 {
+.contact-title {
+    display: flex;
+    justify-content: center;
     margin-bottom: var(--space-1);
 }
 .contact p {
